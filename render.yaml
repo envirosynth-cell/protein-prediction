@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: protein-structure-analyzer
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py --server-name 0.0.0.0 --server-port $PORT
